@@ -21,7 +21,7 @@ export default function Home() {
         <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
           <div className="h-10 w-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 text-xl">🚀</div>
           <h3 className="font-bold text-lg mb-2">Instant Results</h3>
-          <p className="text-sm text-muted-foreground">Get results immediately after the draw time at 3:00 PM.</p>
+          <p className="text-sm text-muted-foreground">Get results immediately between the time of 4:00 PM and 5:00 PM.</p>
         </div>
         <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
           <div className="h-10 w-10 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-4 text-xl">🛡️</div>
