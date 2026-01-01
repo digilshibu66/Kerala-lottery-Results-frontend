@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfbf7; /* Warm off-white */
+  --foreground: #1a1a1a;
+  
+  --primary: #059669; /* Emerald 600 */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f59e0b; /* Amber 500 */
+  --secondary-foreground: #ffffff;
+  
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  
+  --border: #e5e7eb;
+  --input: #f3f4f6;
+  --ring: #059669;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
+    
+    --primary: #10b981; /* Emerald 500 */
+    --primary-foreground: #000000;
+    
+    --secondary: #fbbf24; /* Amber 400 */
+    --secondary-foreground: #000000;
+    
+    --card: #18181b;
+    --card-foreground: #fafafa;
+    
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #10b981;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Gradients */
+.bg-gradient-brand {
+    background: linear-gradient(135deg, var(--primary) 0%, #047857 100%);
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
 }
